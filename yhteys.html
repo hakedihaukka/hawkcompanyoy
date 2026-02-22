@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automaalaamo | Yhteystiedot</title>
+  <meta name="description" content="Yhteystiedot ja ajanvaraus automaalaukseen. Soita, lähetä viesti tai jätä varauspyyntö lomakkeella.">
+  <link rel="canonical" href="https://hawkoy.com/yhteys.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+<body>
+  <header class="masthead">
+    <div class="container nav">
+      <input class="nav-toggle-checkbox" type="checkbox" id="nav-toggle" aria-label="Avaa navigaatio">
+      <label class="nav-toggle" for="nav-toggle" aria-hidden="true">
+        <span></span>
+      </label>
+
+      <nav class="nav-side nav-left">
+        <a href="index.html">Etusivu</a>
+        <a href="maalaus.html">Maalaus</a>
+      </nav>
+
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="Automaalaamo logo">
+      </a>
+
+      <nav class="nav-side nav-right">
+        <a class="active" href="yhteys.html">Yhteystiedot</a>
+        <a href="yhteys.html#yhteys">Varaa aika</a>
+      </nav>
+
+      <nav class="mobile-menu">
+        <a href="index.html">Etusivu</a>
+        <a href="maalaus.html">Maalaus</a>
+        <a class="active" href="yhteys.html">Yhteystiedot</a>
+        <a href="yhteys.html#yhteys">Varaa aika</a>
+      </nav>
+    </div>
+
+    <div class="container hero-wordmark" aria-label="Automaalaamo">
+      <p>AUTOMAALAAMO</p>
+    </div>
+
+    <div class="container hero">
+      <div class="hero-content hero-panel">
+        <p class="hero-location">Automaalaamo Vihdissä</p>
+        <h1 class="hero-title">
+          <span class="hero-line">Yhteystiedot ja ajanvaraus</span>
+        </h1>
+        <p class="hero-sub">Ota yhteyttä puhelimitse, sähköpostilla tai jätä lomakkeella varauspyyntö.</p>
+        <div class="hero-actions">
+          <a class="cta" href="#yhteys">Varaa aika</a>
+          <a class="cta cta-secondary" href="tel:+358447411705">Soita</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="sales-intro" aria-label="Yhteystiedot">
+      <p class="sales-kicker">Yhteystiedot</p>
+      <h2>Meidät tavoitat helposti</h2>
+      <p class="sales-copy">Kun tarvitset arvion kolarikorjauksesta tai vaikka auton ylimaalauksesta, saat meiltä selkeän suunnitelman ja aikataulun.</p>
+    </section>
+
+    <section class="booking-layout section" id="yhteys" aria-label="Varaa aika">
+      <article class="booking-card booking-contact-card">
+        <p class="workshop-kicker">Varaa aika</p>
+        <h2>Yhteystiedot</h2>
+        <p>Puhelimitse saat nopeimmin tiedon vapaista ajoista. Voit myös lähettää viestin lomakkeella.</p>
+        <div class="booking-contact-list">
+          <a href="tel:+358447411705">044 741 1705 </a>
+          <a href="mailto:info@hawkoy.com">info@hawkoy.com</a>
+          <p>Vanjärventie 692, 03400 Lohja (Vihti)</p>
+        </div>
+        <div class="booking-map-wrap" aria-label="Sijainti kartalla">
+          <iframe
+            class="booking-map"
+            src="https://www.google.com/maps?q=Vanj%C3%A4rventie%20692%2C%2003400%20Lohja&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Hawk Company Oy sijainti kartalla">
+          </iframe>
+        </div>
+      </article>
+
+      <form class="booking-card booking-form" action="#" method="post">
+        <label for="name">Nimi</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+
+        <label for="phone">Puhelin</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+
+        <label for="email">Sähköposti</label>
+        <input id="email" name="email" type="email" autocomplete="email">
+
+        <label for="service">Työn tyyppi</label>
+        <select id="service" name="service" required>
+          <option value="">Valitse palvelu</option>
+          <option value="kolarikorjaus">Kolarikorjaus</option>
+          <option value="osamaalaus">Osamaalaus</option>
+          <option value="kokomaalaus">Koko auton maalaus</option>
+          <option value="muu">Muu työ</option>
+        </select>
+
+        <label for="message">Lisätiedot</label>
+        <textarea id="message" name="message" rows="5" placeholder="Kuvaile toiveesi, haaveesi tai unelmasi mitä haluaisit minun maalaamalla toteuttavan."></textarea>
+
+        <button class="booking-submit" type="submit">Lähetä varauspyyntö</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="partners">
+        <div class="partner-logos">
+          <img src="assets/stirwell.webp" alt="Stirwell logo" hidden>
+          <img src="assets/glasurit.webp" alt="Glasurit logo">
+        </div>
+      </div>
+      <div class="footer-contact" aria-label="Yhteystiedot">
+        <a href="tel:+358447411705">044 741 1705</a>
+        <a href="mailto:info@hawkoy.com">info@hawkoy.com</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <p>Vanjärventie 692, 03400 Lohja (Vihti)</p>
+      </div>
+      <div class="footer-legal" aria-label="Lakisivut">
+        <a href="tietosuoja.html">Tietosuojaseloste</a>
+        <a href="evasteet.html">Evästekäytäntö</a>
+        <a href="kayttoehdot.html">Käyttöehdot</a>
+        <a href="toimitusehdot.html">Toimitusehdot</a>
+        <button type="button" data-open-cookie-settings>Evästeasetukset</button>
+      </div>
+      <p class="footer-copy">© 2026 Hawk Company Oy | Y-tunnus 3536913-1</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
