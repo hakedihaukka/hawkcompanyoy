@@ -92,7 +92,7 @@
         </div>
       </article>
 
-      <form class="booking-card booking-form" action="#" method="post">
+      <form class="booking-card booking-form" action="#" method="post" enctype="multipart/form-data">
         <label for="name">Nimi</label>
         <input id="name" name="name" type="text" autocomplete="name" required>
 
@@ -114,6 +114,9 @@
         <label for="message">Lisätiedot</label>
         <textarea id="message" name="message" rows="5" placeholder="Kuvaile toiveesi, haaveesi tai unelmasi mitä haluaisit minun maalaamalla toteuttavan."></textarea>
 
+        <label for="photo">Lisää kuva (valinnainen)</label>
+        <input id="photo" name="photo" type="file" accept="image/*">
+
         <button class="booking-submit" type="submit">Lähetä varauspyyntö</button>
       </form>
     </section>
@@ -124,7 +127,9 @@
       <div class="partners">
         <div class="partner-logos">
           <img src="assets/stirwell.webp" alt="Stirwell logo" hidden>
-          <img src="assets/glasurit.webp" alt="Glasurit logo">
+          <a class="footer-brand-link" href="index.html" aria-label="Siirry etusivulle">
+            <img src="assets/logo.svg" alt="Hawk Company logo">
+          </a>
         </div>
       </div>
       <div class="footer-contact" aria-label="Yhteystiedot">
@@ -147,3 +152,6 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
+

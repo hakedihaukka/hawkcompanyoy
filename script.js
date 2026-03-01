@@ -194,6 +194,13 @@
   }
 
   function createConsentUi() {
+    var launcher = document.createElement("button");
+    launcher.type = "button";
+    launcher.className = "cookie-settings-launcher";
+    launcher.setAttribute("data-open-cookie-settings", "");
+    launcher.setAttribute("aria-label", "Avaa evästeasetukset");
+    launcher.textContent = "Evästeasetukset";
+
     var banner = document.createElement("section");
     banner.className = "cookie-consent";
     banner.setAttribute("aria-label", "Evästeasetukset");
@@ -221,10 +228,11 @@
       '<button type="button" class="cookie-btn" data-cookie-action="reject">Hylkää / Peru suostumus</button>' +
       "</div>";
 
+    document.body.appendChild(launcher);
     document.body.appendChild(banner);
     document.body.appendChild(dialog);
 
-    return { banner: banner, dialog: dialog };
+    return { banner: banner, dialog: dialog, launcher: launcher };
   }
 
   function updateStatusText(statusEl, consent) {
