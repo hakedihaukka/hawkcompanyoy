@@ -1,14 +1,74 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fi">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hawk Company Oy | Automaalaamo Vihti | Etusivu</title>
+  <title>Hawk Company Oy | Automaalaamo & Korikorjaus Vihti | Etusivu</title>
   <meta name="description" content="Automaalaamo Vihdissä. Korikorjaukset, automaalaukset ja viimeistely yli 30 vuoden kokemuksella.">
   <link rel="canonical" href="https://hawkoy.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:locale" content="fi_FI">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hawk Company Oy">
+  <meta property="og:title" content="Hawk Company Oy | Automaalaamo & Korikorjaus Vihti | Etusivu">
+  <meta property="og:description" content="Automaalaamo Vihdissä. Korikorjaukset, automaalaukset ja viimeistely yli 30 vuoden kokemuksella.">
+  <meta property="og:url" content="https://hawkoy.com/">
+  <meta property="og:image" content="https://hawkoy.com/android-chrome-512x512.png">
+  <meta property="og:image:alt" content="Hawk Company Oy logo">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://hawkoy.com/#website",
+          "url": "https://hawkoy.com/",
+          "name": "Hawk Company Oy",
+          "inLanguage": "fi"
+        },
+        {
+          "@type": "AutoBodyShop",
+          "@id": "https://hawkoy.com/#organization",
+          "name": "Hawk Company Oy",
+          "url": "https://hawkoy.com/",
+          "image": "https://hawkoy.com/android-chrome-512x512.png",
+          "description": "Automaalaamo Vihdissä. Korikorjaukset, automaalaukset ja viimeistely yli 30 vuoden kokemuksella.",
+          "telephone": "+358447411705",
+          "email": "info@hawkoy.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Vanjärventie 692",
+            "postalCode": "03400",
+            "addressLocality": "Lohja",
+            "addressCountry": "FI"
+          },
+          "areaServed": [
+            "Vihti",
+            "Lohja"
+          ],
+          "sameAs": [
+            "https://www.facebook.com/share/1EYz6RL2va/?mibextid=wwXIfr"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://hawkoy.com/#webpage",
+          "url": "https://hawkoy.com/",
+          "name": "Hawk Company Oy | Automaalaamo & Korikorjaus Vihti | Etusivu",
+          "description": "Automaalaamo Vihdissä. Korikorjaukset, automaalaukset ja viimeistely yli 30 vuoden kokemuksella.",
+          "inLanguage": "fi",
+          "isPartOf": {
+            "@id": "https://hawkoy.com/#website"
+          },
+          "about": {
+            "@id": "https://hawkoy.com/#organization"
+          }
+        }
+      ]
+    }
+  </script>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -96,13 +156,18 @@
       </div>
 
       <figure class="workshop-image-wrap workshop-map-wrap" aria-label="Sijainti kartalla">
+        <div class="map-consent-placeholder" data-map-placeholder>
+          <p>Kartta ladataan Google Mapsista vasta, kun avaat sen.</p>
+          <button type="button" class="map-load-btn" data-map-load>Avaa kartta</button>
+        </div>
         <iframe
           class="workshop-map"
           title="Automaalaamon sijainti kartalla"
-          src="https://www.google.com/maps?q=Vanj%C3%A4rventie%20692%2C%2003400%20Lohja&output=embed"
+          data-map-src="https://www.google.com/maps?q=Vanj%C3%A4rventie%20692%2C%2003400%20Lohja&output=embed"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen>
+          allowfullscreen
+          hidden>
         </iframe>
       </figure>
     </section>
@@ -119,9 +184,9 @@
         </div>
       </div>
       <div class="footer-contact" aria-label="Yhteystiedot">
-        <a href="tel:+358401234567">044 741 1705</a>
-        <a href="mailto:info@automaalaamo.fi">info@hawkoy.com</a>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="tel:+358447411705">044 741 1705</a>
+        <a href="mailto:info@hawkoy.com">info@hawkoy.com</a>
+        <a href="https://www.facebook.com/share/1EYz6RL2va/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
         <p>Vanjärventie 692, 03400 Lohja (Vihti)</p>
       </div>
       <div class="footer-legal" aria-label="Lakisivut">
@@ -138,4 +203,6 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
 

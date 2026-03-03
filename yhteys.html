@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fi">
 <head>
   <meta charset="utf-8">
@@ -9,6 +9,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:locale" content="fi_FI">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hawk Company Oy">
+  <meta property="og:title" content="Automaalaamo | Yhteystiedot">
+  <meta property="og:description" content="Yhteystiedot ja ajanvaraus automaalaukseen. Soita, lähetä viesti tai jätä varauspyyntö lomakkeella.">
+  <meta property="og:url" content="https://hawkoy.com/yhteys.html">
+  <meta property="og:image" content="https://hawkoy.com/android-chrome-512x512.png">
+  <meta property="og:image:alt" content="Hawk Company Oy logo">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "@id": "https://hawkoy.com/yhteys.html#webpage",
+      "url": "https://hawkoy.com/yhteys.html",
+      "name": "Automaalaamo | Yhteystiedot",
+      "description": "Yhteystiedot ja ajanvaraus automaalaukseen. Soita, lähetä viesti tai jätä varauspyyntö lomakkeella.",
+      "inLanguage": "fi",
+      "isPartOf": {
+        "@id": "https://hawkoy.com/#website"
+      },
+      "about": {
+        "@id": "https://hawkoy.com/#organization"
+      }
+    }
+  </script>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -82,17 +107,22 @@
           <p>Vanjärventie 692, 03400 Lohja (Vihti)</p>
         </div>
         <div class="booking-map-wrap" aria-label="Sijainti kartalla">
+          <div class="map-consent-placeholder" data-map-placeholder>
+            <p>Kartta ladataan Google Mapsista vasta, kun avaat sen.</p>
+            <button type="button" class="map-load-btn" data-map-load>Avaa kartta</button>
+          </div>
           <iframe
             class="booking-map"
-            src="https://www.google.com/maps?q=Vanj%C3%A4rventie%20692%2C%2003400%20Lohja&output=embed"
+            data-map-src="https://www.google.com/maps?q=Vanj%C3%A4rventie%20692%2C%2003400%20Lohja&output=embed"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Hawk Company Oy sijainti kartalla">
+            title="Hawk Company Oy sijainti kartalla"
+            hidden>
           </iframe>
         </div>
       </article>
 
-      <form class="booking-card booking-form" action="#" method="post" enctype="multipart/form-data">
+      <form class="booking-card booking-form" action="https://formspree.io/f/xvzbnbnn" method="post" enctype="multipart/form-data">
         <label for="name">Nimi</label>
         <input id="name" name="name" type="text" autocomplete="name" required>
 
@@ -118,6 +148,7 @@
         <input id="photo" name="photo" type="file" accept="image/*">
 
         <button class="booking-submit" type="submit">Lähetä yhteydenottopyyntö</button>
+        <p>Varauslomake välitetään Formspree-palvelun kautta. Lisätiedot <a href="tietosuoja.html">tietosuojaselosteessa</a>.</p>
       </form>
     </section>
   </main>
@@ -135,7 +166,7 @@
       <div class="footer-contact" aria-label="Yhteystiedot">
         <a href="tel:+358447411705">044 741 1705</a>
         <a href="mailto:info@hawkoy.com">info@hawkoy.com</a>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.facebook.com/share/1EYz6RL2va/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
         <p>Vanjärventie 692, 03400 Lohja (Vihti)</p>
       </div>
       <div class="footer-legal" aria-label="Lakisivut">
@@ -152,6 +183,8 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 

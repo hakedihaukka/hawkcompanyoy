@@ -70,19 +70,17 @@
   function initPortfolioModal() {
     var modal = document.getElementById("portfolio-modal");
     var modalImage = document.getElementById("portfolio-modal-image");
-    var modalTitle = document.getElementById("portfolio-modal-title");
     var items = document.querySelectorAll(".portfolio-item");
-    if (!modal || !modalImage || !modalTitle || !items.length) return;
+    if (!modal || !modalImage || !items.length) return;
 
     items.forEach(function (item) {
       item.addEventListener("click", function () {
         var full = item.getAttribute("data-full");
-        var title = item.getAttribute("data-title") || "";
-        var description = item.getAttribute("data-description") || title;
+        var image = item.querySelector("img");
+        var alt = image ? image.getAttribute("alt") || "" : "";
         if (!full) return;
         modalImage.src = full;
-        modalImage.alt = title;
-        modalTitle.textContent = description;
+        modalImage.alt = alt;
         modal.showModal();
       });
     });
@@ -95,6 +93,28 @@
         rect.left <= event.clientX &&
         event.clientX <= rect.left + rect.width;
       if (!isInside) modal.close();
+    });
+  }
+
+  function initMapEmbeds() {
+    var placeholders = document.querySelectorAll("[data-map-placeholder]");
+    if (!placeholders.length) return;
+
+    placeholders.forEach(function (placeholder) {
+      var container = placeholder.parentElement;
+      if (!container) return;
+
+      var frame = container.querySelector("iframe[data-map-src]");
+      var button = placeholder.querySelector("[data-map-load]");
+      if (!frame || !button) return;
+
+      button.addEventListener("click", function () {
+        var mapSrc = frame.getAttribute("data-map-src");
+        if (!mapSrc) return;
+        frame.src = mapSrc;
+        frame.hidden = false;
+        placeholder.remove();
+      });
     });
   }
 
@@ -322,6 +342,7 @@
     initNavigation();
     initCounters();
     initPortfolioModal();
+    initMapEmbeds();
     initCookieConsent();
   }
 
